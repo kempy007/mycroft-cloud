@@ -5,7 +5,7 @@ RUN cd / && git clone https://github.com/JarbasSkills/skill-voip.git && ls
 FROM mycroftai/docker-mycroft
 
 COPY --from=GIT /skill-voip /opt/mycroft/skills/skill-voip
-RUN 	cd /opt/mycroft/skills \
+RUN 	cd /opt/mycroft/skills/skill-voip \
   && apt-get update \
   && apt-get -y install libre-dev librem-dev baresip ffmpeg \
 	&& apt-get -y autoremove \
