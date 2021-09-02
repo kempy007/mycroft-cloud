@@ -11,4 +11,4 @@ RUN 	cd /opt/mycroft/skills \
 	&& apt-get -y autoremove \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-  && mycroft-pip install -r requirements.txt
+  && /opt/mycroft/bin/mycroft-pip install -r requirements.txt
