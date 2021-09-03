@@ -16,6 +16,7 @@ Mycroft AI in cloud via SIP
 - https://github.com/baresip/re
 - https://github.com/baresip/rem
 - https://hub.docker.com/r/mycroftai/docker-mycroft (intended to be used as client in container to attach to host audio)
+- https://github.com/MycroftAI/docker-mycroft.git
 - https://account.mycroft.ai/
 - https://app.sipgate.com/
 - https://github-wiki-see.page/m/mviereck/x11docker/wiki/Container-sound:-ALSA-or-Pulseaudio
