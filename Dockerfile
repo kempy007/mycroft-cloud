@@ -26,9 +26,7 @@ RUN 	mkdir /root/.mycroft && mkdir /root/.mycroft/identity && cd /opt/mycroft/sk
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
   && usermod -aG pulse-access root \
   && chmod +x /opt/mycroft/startup.sh \
-  && /opt/mycroft/bin/mycroft-msm install https://github.com/JarbasSkills/skill-voip
-#  && /opt/mycroft/bin/mycroft-pip install -r requirements.txt
-# TODO: seems 'baresip -f /root/.baresip' work but 'baresip' does not and has same error in logs when invoked by skill. pulseaudio also has no devices, seems to rely on host system mapping in snd device and volumes.
-# TODO: Remove creds and rotate keys.
+  && /opt/mycroft/bin/mycroft-pip install -r requirements.txt
+#  && /opt/mycroft/bin/mycroft-msm install https://github.com/JarbasSkills/skill-voip
 
 COPY identity2.json /root/.mycroft/identity
