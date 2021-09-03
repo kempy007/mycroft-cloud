@@ -17,7 +17,7 @@ RUN cd /root && git clone https://github.com/baresip/re.git \
 
 # libre-dev librem-dev baresip   && cd /opt/mycroft/skills/skill-voip \
 RUN 	mkdir /root/.mycroft && mkdir /root/.mycroft/identity \
-  && mkdir /root/.baresip && echo "<sip:REDACTED@sipgate.co.uk>;auth_pass=REDACTED" > /root/.baresip/accounts 
+  && mkdir /root/.baresip && echo "<sip:REDACTED@sipgate.co.uk>;auth_pass=REDACTED" > /root/.baresip/accounts \
   && cd /opt/mycroft && git pull \
   && CI=true /opt/mycroft/./dev_setup.sh --allow-root -sm \
   && apt-get update \
