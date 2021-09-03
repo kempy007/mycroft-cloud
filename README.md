@@ -2,11 +2,13 @@
 Mycroft AI in cloud via SIP
 
 # Issues
-- [ ] baresipy fails to connect
+- [ ] baresipy fails to connect [upstream log](https://github.com/JarbasSkills/skill-voip/issues/7_)
   - [x] create /root/.baresip/accounts
   - [x] test 'baresip' Failed (log matches that of baresipy log error)
   - [x] test 'baresip -f /root/.baresip' Worked
 - [ ] PulseAudio server in container
+- [ ] Remove creds and rotate keys.
+
 
 ## References
 - https://community.mycroft.ai/t/mycroft-as-sip-client-smart-voice-enabled-ivr/6736/3
