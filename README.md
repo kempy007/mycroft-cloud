@@ -2,7 +2,7 @@
 Mycroft AI in cloud via SIP
 
 # Issues
-- [ ] baresipy fails to connect [upstream log](https://github.com/JarbasSkills/skill-voip/issues/7_)
+- [ ] baresipy fails to connect [upstream log](https://github.com/JarbasSkills/skill-voip/issues/7)
   - [x] create /root/.baresip/accounts
   - [x] test 'baresip' Failed (log matches that of baresipy log error)
   - [x] test 'baresip -f /root/.baresip' Worked
