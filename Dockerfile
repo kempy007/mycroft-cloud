@@ -17,7 +17,7 @@ RUN cd /root && git clone https://github.com/baresip/re.git \
 
 # libre-dev librem-dev baresip   && cd /opt/mycroft/skills/skill-voip \
 RUN 	mkdir /root/.mycroft && mkdir /root/.mycroft/identity \
-  && mkdir /root/.baresip && echo "<sip:REDACTED@sipgate.co.uk>;auth_pass=REDACTED" > /root/.baresip/accounts \
+  && mkdir /root/.baresip && echo "<sip:REDACTED@sipgate.co.uk>;auth_pass=REDACTED;answermode=auto" > /root/.baresip/accounts \
   && cd /opt/mycroft && git pull \
   && CI=true /opt/mycroft/./dev_setup.sh --allow-root -sm \
   && apt-get update \
@@ -26,8 +26,9 @@ RUN 	mkdir /root/.mycroft && mkdir /root/.mycroft/identity \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
   && usermod -aG pulse-access root \
-  && chmod +x /opt/mycroft/startup.sh \
-  && /opt/mycroft/bin/mycroft-msm install https://github.com/JarbasSkills/skill-voip
+  && chmod +x /opt/mycroft/startup.sh 
+#  && /opt/mycroft/bin/mycroft-msm install https://github.com/JarbasSkills/skill-voip
 #  && /opt/mycroft/bin/mycroft-pip install -r requirements.txt  
 
 COPY identity2.json /root/.mycroft/identity
+COPY config /root/.baresip
