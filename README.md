@@ -1,9 +1,14 @@
 # mycroft-cloud
 Mycroft AI in cloud via SIP
 
+Whilst this project was successful in connecting the audio via Sip to Mycroft, it was unusable due to codec quality issue and delayed loopback. manually entering command via the cli were audible to acceptable level, the input for mycroft would often become distorted after the keyword was recognised, perhaps the beep it plays as the user is talking interferes like a shared intercom.
+the voip-skill that used baresipy no longer works, so resorted to using baresip directly, perhaps this is where the effort needs to be spent to improve the audio quality. Not all the modules were available to baresip, perhaps the compile options were incorrect.
+
 # local build
-docker built -t "mcc:latest" .
+```
+docker build -t "mcc:latest" .
 docker run -it --rm --entrypoint=/bin/bash mcc:latest
+```
 
 # Issues
 - [ ] baresipy fails to connect [upstream log](https://github.com/JarbasSkills/skill-voip/issues/7)
